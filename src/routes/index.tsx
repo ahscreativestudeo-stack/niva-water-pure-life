@@ -10,13 +10,13 @@ import { Bubbles, Wave } from "@/components/Bubbles";
 import { Counter } from "@/components/Counter";
 import { Reveal } from "@/components/Reveal";
 
-import banner from "@/assets/banner.png.asset.json";
-import bannerHero from "@/assets/banner-hero.png.asset.json";
-import logo from "@/assets/logo.png.asset.json";
-import b19 from "@/assets/bottle-19l.png.asset.json";
-import b6 from "@/assets/bottle-6l.png.asset.json";
-import b500 from "@/assets/bottle-500ml.png.asset.json";
-import bPair from "@/assets/bottles-pair.png.asset.json";
+import banner from "@/assets/banner.png";
+import bannerHero from "@/assets/banner-hero.png";
+import logo from "@/assets/logo.png";
+import b19 from "@/assets/bottle-19l.png";
+import b6 from "@/assets/bottle-6l.png";
+import b500 from "@/assets/bottle-500ml.png";
+import bPair from "@/assets/bottles-pair.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,10 +33,10 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { name: "500 ml", desc: "Everyday convenience", img: b500.url, tag: "Popular" },
-  { name: "1.5 Litre", desc: "Family & office use", img: bPair.url, tag: "Value" },
-  { name: "6 Litre", desc: "Home kitchen sized", img: b6.url, tag: "Household" },
-  { name: "19 Litre", desc: "Bulk dispenser bottle", img: b19.url, tag: "Corporate" },
+  { name: "500 ml", desc: "Everyday convenience", img: b500, tag: "Popular" },
+  { name: "1.5 Litre", desc: "Family & office use", img: bPair, tag: "Value" },
+  { name: "6 Litre", desc: "Home kitchen sized", img: b6, tag: "Household" },
+  { name: "19 Litre", desc: "Bulk dispenser bottle", img: b19, tag: "Corporate" },
 ];
 
 const process = [
@@ -51,7 +51,7 @@ const process = [
   { icon: Package, label: "NIVA Bottling" },
 ];
 
-const gallery = [banner.url, b19.url, b6.url, b500.url, bPair.url, banner.url];
+const gallery = [banner, b19, b6, b500, bPair, banner];
 
 const locations = [
   "NICVD Karachi", "Muhammadi Building Bank", "Global Express", "Hospital Solution Office",
@@ -69,7 +69,7 @@ function Home() {
       <section className="relative w-full bg-white pt-20">
         <div className="relative w-full">
           <img
-            src={bannerHero.url}
+            src={bannerHero}
             alt="NIVA Water — Pure. Safe. Healthy. HA Enterprises"
             className="block h-auto w-full"
           />
@@ -245,7 +245,7 @@ function Home() {
           </Reveal>
           <Reveal>
             <div className="group relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow">
-              <img src={banner.url} alt="NIVA promotional video" className="h-full w-full object-cover" />
+              <img src={banner} alt="NIVA promotional video" className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-hero" />
               <button
                 aria-label="Play video"
@@ -357,7 +357,7 @@ function Home() {
           <div>
             <div className="flex items-center gap-3">
               <div className="grid h-12 w-12 place-items-center rounded-full bg-white">
-                <img src={logo.url} alt="NIVA" className="h-10 w-10 object-contain" />
+                <img src={logo} alt="NIVA" className="h-10 w-10 object-contain" />
               </div>
               <div>
                 <div className="font-display text-xl font-bold text-white">NIVA</div>
