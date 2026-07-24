@@ -71,7 +71,10 @@ function Home() {
           <img
             src={bannerHero}
             alt="NIVA Water — Pure. Safe. Healthy. HA Enterprises"
-            className="block h-auto w-full"
+            className="block h-auto w-full object-contain"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <Bubbles />
         </div>
