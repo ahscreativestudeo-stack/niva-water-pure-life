@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
           <div className={`grid h-11 w-11 place-items-center rounded-full transition-all ${scrolled ? "bg-white/95" : "bg-white/90"} shadow-card`}>
-            <img src={logo.url} alt="NIVA Drinking Water" className="h-9 w-9 object-contain" />
+            <img src={logo} alt="NIVA Drinking Water" className="h-9 w-9 object-contain" />
           </div>
           <div className="leading-tight">
             <div className={`font-display text-lg font-bold ${scrolled ? "text-white" : "text-white drop-shadow"}`}>NIVA</div>
