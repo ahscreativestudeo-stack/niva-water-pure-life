@@ -252,8 +252,11 @@ function Home() {
               <video
                 src={nivaVideo.url}
                 controls
+                autoPlay
+                muted
+                loop
                 playsInline
-                preload="metadata"
+                preload="auto"
                 className="h-full w-full object-cover"
                 aria-label="NIVA promotional video"
               />
