@@ -43,15 +43,22 @@ const products = [
 ];
 
 const process = [
-  { icon: Droplets, label: "Raw Water" },
-  { icon: Filter, label: "Sand Filter" },
-  { icon: Beaker, label: "Carbon Filter" },
-  { icon: FlaskConical, label: "RO Plant" },
+  { icon: Database, label: "Underground Water Storage Tank" },
+  { icon: Filter, label: "Jumbo Housing Water Filter" },
+  { icon: Box, label: "Raw Water Storage Tank" },
+  { icon: ArrowRight, label: "Feed Water Pump" },
+  { icon: Layers, label: "Multimedia" },
   { icon: Sun, label: "UV Sterilization" },
-  { icon: Sparkles, label: "Ozonation" },
-  { icon: Waves, label: "Mineral Balancing" },
-  { icon: TestTube, label: "Quality Testing" },
-  { icon: Package, label: "NIVA Bottling" },
+  { icon: Beaker, label: "Carbon Filter" },
+  { icon: Gauge, label: "High Pressure Pump" },
+  { icon: FlaskConical, label: "Reverse Osmosis System" },
+  { icon: Plus, label: "Mineral Injection Dosing Pumps" },
+  { icon: Database, label: "Product Water Tanks" },
+  { icon: Filter, label: "Slim Filter" },
+  { icon: Sparkles, label: "Ozonation System" },
+  { icon: ShieldCheck, label: "UV Sterilization Before Filling" },
+  { icon: Package, label: "Filling & Capping Machine" },
+  { icon: CircleCheck, label: "Shrink Seal" },
 ];
 
 const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
