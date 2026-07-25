@@ -53,7 +53,7 @@ const process = [
   { icon: Package, label: "NIVA Bottling" },
 ];
 
-const gallery = [banner, b19, b6, b500, bPair, banner];
+const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
 
 const locations = [
   "NICVD Karachi", "Muhammadi Building Bank", "Global Express", "Hospital Solution Office",
