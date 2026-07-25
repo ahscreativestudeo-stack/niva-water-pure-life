@@ -189,7 +189,7 @@ function Home() {
           <Reveal>
             <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-brand">Our Plant</p>
-              <h2 className="mt-2 text-4xl font-bold text-foreground sm:text-5xl">9-Step Purification Process</h2>
+              <h2 className="mt-2 text-4xl font-bold text-foreground sm:text-5xl">16-Step Purification Process</h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
                 Every NIVA bottle passes through a rigorously engineered process — from raw source to sealed purity.
               </p>
