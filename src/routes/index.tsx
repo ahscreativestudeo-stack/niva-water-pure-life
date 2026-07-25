@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Phone, MessageCircle, Mail, MapPin, Send, Facebook, Instagram, Youtube, Twitter,
-  Droplets, ShieldCheck, Leaf, HeartPulse, Play, X as XIcon,
+  Droplets, ShieldCheck, Leaf, HeartPulse, X as XIcon,
   Filter, Beaker, Sparkles, TestTube, Package, Waves, Sun, FlaskConical,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -17,6 +17,7 @@ import b19 from "@/assets/bottle-19l.png";
 import b6 from "@/assets/bottle-6l.png";
 import b500 from "@/assets/bottle-500ml.png";
 import bPair from "@/assets/bottles-pair.png";
+import nivaVideo from "@/assets/niva-video.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -247,17 +248,16 @@ function Home() {
             </div>
           </Reveal>
           <Reveal>
-            <div className="group relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow">
-              <img src={banner} alt="NIVA promotional video" className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-hero" />
-              <button
-                aria-label="Play video"
-                className="absolute inset-0 grid place-items-center"
-              >
-                <span className="grid h-20 w-20 place-items-center rounded-full bg-white/95 text-brand-deep shadow-glow transition-transform group-hover:scale-110">
-                  <Play size={30} className="ml-1" fill="currentColor" />
-                </span>
-              </button>
+            <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow bg-brand-deep">
+              <video
+                src={nivaVideo.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover"
+                aria-label="NIVA promotional video"
+                poster={banner}
+              />
             </div>
           </Reveal>
         </div>
