@@ -256,7 +256,6 @@ function Home() {
                 preload="metadata"
                 className="h-full w-full object-cover"
                 aria-label="NIVA promotional video"
-                poster={banner}
               />
             </div>
           </Reveal>
