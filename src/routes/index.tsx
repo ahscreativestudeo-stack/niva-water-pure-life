@@ -4,6 +4,7 @@ import {
   Phone, MessageCircle, Mail, MapPin, Send, Facebook, Instagram, Youtube, Twitter,
   Droplets, ShieldCheck, Leaf, HeartPulse, X as XIcon,
   Filter, Beaker, Sparkles, TestTube, Package, Waves, Sun, FlaskConical,
+  Database, Layers, ArrowRight, Gauge, Plus, Box, CircleCheck, Wind,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Bubbles, Wave } from "@/components/Bubbles";
@@ -42,15 +43,22 @@ const products = [
 ];
 
 const process = [
-  { icon: Droplets, label: "Raw Water" },
-  { icon: Filter, label: "Sand Filter" },
-  { icon: Beaker, label: "Carbon Filter" },
-  { icon: FlaskConical, label: "RO Plant" },
+  { icon: Database, label: "Underground Water Storage Tank" },
+  { icon: Filter, label: "Jumbo Housing Water Filter" },
+  { icon: Box, label: "Raw Water Storage Tank" },
+  { icon: ArrowRight, label: "Feed Water Pump" },
+  { icon: Layers, label: "Multimedia" },
   { icon: Sun, label: "UV Sterilization" },
-  { icon: Sparkles, label: "Ozonation" },
-  { icon: Waves, label: "Mineral Balancing" },
-  { icon: TestTube, label: "Quality Testing" },
-  { icon: Package, label: "NIVA Bottling" },
+  { icon: Beaker, label: "Carbon Filter" },
+  { icon: Gauge, label: "High Pressure Pump" },
+  { icon: FlaskConical, label: "Reverse Osmosis System" },
+  { icon: Plus, label: "Mineral Injection Dosing Pumps" },
+  { icon: Database, label: "Product Water Tanks" },
+  { icon: Filter, label: "Slim Filter" },
+  { icon: Sparkles, label: "Ozonation System" },
+  { icon: ShieldCheck, label: "UV Sterilization Before Filling" },
+  { icon: Package, label: "Filling & Capping Machine" },
+  { icon: CircleCheck, label: "Shrink Seal" },
 ];
 
 const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
@@ -181,7 +189,7 @@ function Home() {
           <Reveal>
             <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-widest text-brand">Our Plant</p>
-              <h2 className="mt-2 text-4xl font-bold text-foreground sm:text-5xl">9-Step Purification Process</h2>
+              <h2 className="mt-2 text-4xl font-bold text-foreground sm:text-5xl">16-Step Purification Process</h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
                 Every NIVA bottle passes through a rigorously engineered process — from raw source to sealed purity.
               </p>
