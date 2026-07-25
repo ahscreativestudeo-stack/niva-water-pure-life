@@ -18,6 +18,7 @@ import b6 from "@/assets/bottle-6l.png";
 import b500 from "@/assets/bottle-500ml.png";
 import bPair from "@/assets/bottles-pair.png";
 import nivaVideo from "@/assets/niva-video.mp4.asset.json";
+import nivaFamily from "@/assets/niva-family.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +53,7 @@ const process = [
   { icon: Package, label: "NIVA Bottling" },
 ];
 
-const gallery = [banner, b19, b6, b500, bPair, banner];
+const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
 
 const locations = [
   "NICVD Karachi", "Muhammadi Building Bank", "Global Express", "Hospital Solution Office",
@@ -249,16 +250,12 @@ function Home() {
           </Reveal>
           <Reveal>
             <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow bg-brand-deep">
-              <video
-                src={nivaVideo.url}
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
+              <img
+                src={nivaFamily.url}
+                alt="NIVA family — Pure Water, Pure Life"
                 className="h-full w-full object-cover"
-                aria-label="NIVA promotional video"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </Reveal>
