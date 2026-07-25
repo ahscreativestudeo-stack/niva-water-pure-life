@@ -250,16 +250,12 @@ function Home() {
           </Reveal>
           <Reveal>
             <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow bg-brand-deep">
-              <video
-                src={nivaVideo.url}
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
+              <img
+                src={nivaFamily.url}
+                alt="NIVA family — Pure Water, Pure Life"
                 className="h-full w-full object-cover"
-                aria-label="NIVA promotional video"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </Reveal>
