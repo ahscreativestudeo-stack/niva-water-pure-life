@@ -4,6 +4,7 @@ import {
   Phone, MessageCircle, Mail, MapPin, Send, Facebook, Instagram, Youtube, Twitter,
   Droplets, ShieldCheck, Leaf, HeartPulse, X as XIcon,
   Filter, Beaker, Sparkles, TestTube, Package, Waves, Sun, FlaskConical,
+  Database, Layers, ArrowRight, Gauge, Plus, Box, CircleCheck, Wind,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Bubbles, Wave } from "@/components/Bubbles";
