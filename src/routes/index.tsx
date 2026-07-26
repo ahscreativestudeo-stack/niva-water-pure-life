@@ -64,8 +64,33 @@ const process = [
 const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
 
 const locations = [
-  "NICVD Karachi", "Muhammadi Building Bank", "Global Express", "Hospital Solution Office",
-  "M.M. Co Office", "Oil Refinery", "N.H.S Housing Society", "Askari 4",
+  "Muhammad Ali Blood Bank",
+  "NICVD (National Institute of Cardiovascular Diseases), Karachi",
+  "Global Express",
+  "Hospital Solution",
+  "M.M. Co.",
+  "Oil Refinery",
+  "A.B.G. Engineering",
+  "Safari Tea Company",
+  "Saima Green City, Malir",
+  "N.H.S. Housing Society",
+  "Askari IV",
+  "Shamsi Society",
+  "Raf-e-Aam",
+  "Shah Faisal",
+  "Model Town",
+  "Model Colony",
+  "Gulistan-e-Jauhar",
+  "North Nazimabad",
+  "Nursery",
+  "P.E.C.H.S. (Pakistan Employees Cooperative Housing Society)",
+  "Numaish",
+  "Soldier Bazaar",
+  "Jaffer Tayyar",
+  "Saudabad",
+  "Muhammadi Dera",
+  "Tariq Road",
+  "Muhammad Ali Society",
 ];
 
 function Home() {
