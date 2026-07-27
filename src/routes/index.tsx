@@ -12,14 +12,12 @@ import { Counter } from "@/components/Counter";
 import { Reveal } from "@/components/Reveal";
 
 import banner from "@/assets/banner.png";
-import bannerHero from "@/assets/banner-hero.png";
 import logo from "@/assets/logo.png";
 import b19 from "@/assets/bottle-19l.png";
 import b6 from "@/assets/bottle-6l.png";
 import b500 from "@/assets/bottle-500ml.png";
 import bPair from "@/assets/bottles-pair.png";
-import nivaVideo from "@/assets/niva-video.mp4.asset.json";
-import nivaFamily from "@/assets/niva-family.jpg.asset.json";
+import nivaFamily from "@/assets/niva-family.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
