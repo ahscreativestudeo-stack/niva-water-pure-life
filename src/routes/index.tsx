@@ -59,7 +59,7 @@ const process = [
   { icon: CircleCheck, label: "Shrink Seal" },
 ];
 
-const gallery = [nivaFamily.url, banner, b19, b6, b500, bPair];
+const gallery = [nivaFamily, banner, b19, b6, b500, bPair];
 
 const locations = [
   "Muhammad Ali Blood Bank",
@@ -102,7 +102,7 @@ function Home() {
       <section className="relative w-full bg-white pt-20">
         <div className="relative w-full">
           <img
-            src={bannerHero}
+            src={nivaFamily}
             alt="NIVA Water — Pure. Safe. Healthy. HA Enterprises"
             className="block h-auto w-full object-contain"
             loading="eager"
@@ -287,7 +287,7 @@ function Home() {
           <Reveal>
             <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-glow bg-brand-deep">
               <img
-                src={nivaFamily.url}
+                src={nivaFamily}
                 alt="NIVA family — Pure Water, Pure Life"
                 className="h-full w-full object-cover"
                 loading="lazy"
