@@ -108,11 +108,6 @@ function Home() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            onError={(event) => {
-              if (event.currentTarget.src !== banner) {
-                event.currentTarget.src = banner;
-              }
-            }}
           />
           <Bubbles />
         </div>
