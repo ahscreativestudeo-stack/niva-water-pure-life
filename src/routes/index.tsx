@@ -20,6 +20,7 @@ import bPair from "@/assets/bottles-pair.png";
 import nivaFamily from "@/assets/niva-family.jpg";
 import nivaPromo from "@/assets/niva-promo.jpg";
 import nivaDehydration from "@/assets/niva-dehydration.jpg";
+import nivaIndependence from "@/assets/niva-independence.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -155,6 +156,21 @@ function Home() {
             <img
               src={nivaDehydration}
               alt="Are you dehydrated? Early and advanced signs of dehydration — NIVA hydration tips"
+              className="block h-auto w-full rounded-2xl object-contain shadow-card"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* INDEPENDENCE DAY PROMO */}
+      <section className="relative bg-white pb-6 sm:pb-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8">
+          <Reveal>
+            <img
+              src={nivaIndependence}
+              alt="NIVA Drinking Water — Jashn-e-Azadi Mubarak 14 August Pakistan Zindabad"
               className="block h-auto w-full rounded-2xl object-contain shadow-card"
               loading="lazy"
               decoding="async"
