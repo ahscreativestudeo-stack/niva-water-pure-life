@@ -19,6 +19,7 @@ import b500 from "@/assets/bottle-500ml.png";
 import bPair from "@/assets/bottles-pair.png";
 import nivaFamily from "@/assets/niva-family.jpg";
 import nivaPromo from "@/assets/niva-promo.jpg";
+import nivaDehydration from "@/assets/niva-dehydration.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
