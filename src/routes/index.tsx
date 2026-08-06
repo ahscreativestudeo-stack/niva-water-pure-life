@@ -18,6 +18,7 @@ import b6 from "@/assets/bottle-6l.png";
 import b500 from "@/assets/bottle-500ml.png";
 import bPair from "@/assets/bottles-pair.png";
 import nivaFamily from "@/assets/niva-family.jpg";
+import nivaPromo from "@/assets/niva-promo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -131,6 +132,20 @@ function Home() {
         </div>
       </section>
 
+      {/* PROMO IMAGE */}
+      <section className="relative bg-white py-6 sm:py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8">
+          <Reveal>
+            <img
+              src={nivaPromo}
+              alt="NIVA Drinking Water — 100% pure & safe, RO purified, mineral enriched, UV protected"
+              className="block h-auto w-full rounded-2xl object-contain shadow-card"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+        </div>
+      </section>
 
       {/* PRODUCTS */}
       <section id="products" className="relative py-24 sm:py-32">
