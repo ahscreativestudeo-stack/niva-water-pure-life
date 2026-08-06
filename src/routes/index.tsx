@@ -148,6 +148,22 @@ function Home() {
         </div>
       </section>
 
+      {/* HYDRATION AWARENESS IMAGE */}
+      <section className="relative bg-white pb-6 sm:pb-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8">
+          <Reveal>
+            <img
+              src={nivaDehydration}
+              alt="Are you dehydrated? Early and advanced signs of dehydration — NIVA hydration tips"
+              className="block h-auto w-full rounded-2xl object-contain shadow-card"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+
       {/* PRODUCTS */}
       <section id="products" className="relative py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 sm:px-8">
