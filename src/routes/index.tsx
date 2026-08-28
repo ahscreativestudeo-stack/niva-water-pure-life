@@ -498,6 +498,11 @@ function Home() {
         <MessageCircle size={26} />
       </a>
 
+      {/* AI Assistant (Chat + Voice) */}
+      <AiAssistant />
+
+
+
       {/* Lightbox */}
       {lightbox && (
         <div
