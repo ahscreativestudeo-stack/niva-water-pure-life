@@ -10,6 +10,8 @@ import { Navbar } from "@/components/Navbar";
 import { Bubbles, Wave } from "@/components/Bubbles";
 import { Counter } from "@/components/Counter";
 import { Reveal } from "@/components/Reveal";
+import { AiAssistant } from "@/components/AiAssistant";
+
 
 import banner from "@/assets/banner.png";
 import logo from "@/assets/logo.png";
