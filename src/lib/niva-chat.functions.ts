@@ -12,7 +12,14 @@ export const nivaChat = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const apiKey = process.env["LOVABLE_API_KEY"];
-    if (!apiKey) throw new Error("AI gateway key is not configured");
+    if (!apiKey) {
+      return {
+        reply:
+          "معذرت، AI سروس ابھی دستیاب نہیں۔ براہ کرم WhatsApp پر رابطہ کریں: 0346-2044095",
+        ok: false as const,
+      };
+    }
+
 
     const systemPrompt = `You are the NIVA Drinking Water AI customer support assistant for HA Enterprises, Karachi, Pakistan.
 
@@ -32,27 +39,48 @@ ORDERS & CONTACT:
 
 STYLE: Warm, polite, concise (2-4 sentences unless detail is needed). Use a respectful Pakistani tone. Never discuss competitors, politics, or topics unrelated to NIVA water service.`;
 
-    const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [{ role: "system", content: systemPrompt }, ...data.messages],
-      }),
-    });
+    const call = async () =>
+      fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Lovable-API-Key": apiKey,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "google/gemini-3.7-flash",
+          messages: [{ role: "system", content: systemPrompt }, ...data.messages],
+        }),
+      });
+
+    let res = await call();
+    if (res.status === 429 || res.status >= 500) {
+      await new Promise((r) => setTimeout(r, 1200));
+      res = await call();
+    }
 
     if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`AI gateway error ${res.status}: ${text.slice(0, 200)}`);
+      const detail = (await res.text()).slice(0, 300);
+      console.error("NIVA AI gateway error", res.status, detail);
+      const reply =
+        res.status === 429
+          ? "ابھی رش زیادہ ہے، براہ کرم چند لمحوں بعد دوبارہ کوشش کریں۔\n(High traffic right now — please try again in a moment.)"
+          : res.status === 402 || res.status === 403
+            ? "معذرت، AI سروس عارضی طور پر بند ہے۔ فوری مدد کے لیے WhatsApp: 0346-2044095\n(AI service is temporarily unavailable. For help, WhatsApp 0346-2044095.)"
+            : "معذرت، ابھی جواب نہیں بن سکا۔ دوبارہ کوشش کریں۔\n(Sorry, I couldn't generate a reply. Please try again.)";
+      return { reply, ok: false as const };
     }
 
     const json = (await res.json()) as {
       choices?: { message?: { content?: string } }[];
     };
     const reply = json.choices?.[0]?.message?.content?.trim();
-    if (!reply) throw new Error("Empty response from AI gateway");
-    return { reply };
+    if (!reply) {
+      return {
+        reply:
+          "معذرت، جواب خالی آیا۔ براہ کرم اپنا سوال دوبارہ لکھیں۔\n(Empty reply — please rephrase your question.)",
+        ok: false as const,
+      };
+    }
+    return { reply, ok: true as const };
   });
+
