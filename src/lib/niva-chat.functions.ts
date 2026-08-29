@@ -12,7 +12,14 @@ export const nivaChat = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const apiKey = process.env["LOVABLE_API_KEY"];
-    if (!apiKey) throw new Error("AI gateway key is not configured");
+    if (!apiKey) {
+      return {
+        reply:
+          "معذرت، AI سروس ابھی دستیاب نہیں۔ براہ کرم WhatsApp پر رابطہ کریں: 0346-2044095",
+        ok: false as const,
+      };
+    }
+
 
     const systemPrompt = `You are the NIVA Drinking Water AI customer support assistant for HA Enterprises, Karachi, Pakistan.
 
